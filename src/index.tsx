@@ -4,11 +4,12 @@ import './index.css';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import { ReactGridLayoutComponent } from './components/ReactGridLayoutComponent';
+// import { ReactGridLayoutComponent } from './components/ReactGridLayoutComponent';
+import { NoCompactingLayout } from "./components/ReactGridLayoutComponent";
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
-  <ReactGridLayoutComponent />,
+  <NoCompactingLayout />,
   document.getElementById('root') as HTMLElement
 );
 registerServiceWorker();
