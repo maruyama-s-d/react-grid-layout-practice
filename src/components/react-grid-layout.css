@@ -1,0 +1,4 @@
+.react-grid-layout:not(.react-grid-placeholder) {
+  background: rgb(50, 190, 255);
+  border: 1px solid black;
+}
