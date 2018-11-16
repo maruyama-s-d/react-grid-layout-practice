@@ -10,33 +10,33 @@ import { WidthProvider } from 'react-grid-layout';
 const ReactGridLayout = WidthProvider(RGL);
 
 interface IProps extends RGL.ReactGridLayoutProps {
-    className: string,
-    items: number,
-    cols: number,
-    rowHeight: number,
-    verticalCompact: boolean,
-    onLayoutChange: (layout: ILayout[]) => void,
+    className: string;
+    items: number;
+    cols: number;
+    rowHeight: number;
+    verticalCompact: boolean;
+    onLayoutChange: (layout: ILayout[]) => void;
 }
 
-interface IState{
+interface IState {
     layout: ILayout[];
 }
 
 interface ILayout extends RGL.Layout {
-    i: string,
-    x: number,
-    y: number,
-    w: number,
-    h: number,
+    i: string;
+    x: number;
+    y: number;
+    w: number;
+    h: number;
 }
 
 export class NoCompactingLayout extends React.PureComponent<IProps, IState> {
-    public static defaultProps : Partial<IProps> = {
+    public static defaultProps: Partial<IProps> = {
         items: 50,
         className: "layout",
         cols: 12,
         rowHeight: 30,
-        verticalCompact: false,
+        verticalCompact: true,
     }
 
     constructor(props: IProps) {
@@ -72,7 +72,7 @@ export class NoCompactingLayout extends React.PureComponent<IProps, IState> {
 
     public onLayoutChange(layout: ILayout[]) {
         // this.props.onLayoutChange(layout);
-        this.setState({layout});
+        this.setState({ layout });
     }
 
     public render() {
